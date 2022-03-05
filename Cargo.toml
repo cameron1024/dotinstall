@@ -1,0 +1,17 @@
+[package]
+name = "dotinstall"
+description = "DSL for automating installation of dotfiles"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cameron1024/dotinstall"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tracing = "0.1"
+duct = "0.13"
+dotinstall-macro = { path = "../dotinstall-macro" }
+
+[dev-dependencies]
+trybuild = "1"
