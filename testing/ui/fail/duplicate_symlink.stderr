@@ -1,0 +1,5 @@
+error: Duplicate symlink for `foo`
+ --> testing/ui/fail/duplicate_symlink.rs:6:9
+  |
+6 |         "foo" => "baz",
+  |         ^^^^^

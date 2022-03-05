@@ -25,7 +25,11 @@ dotinstall::installer! {
     cargo {
         "ripgrep",
         "exa",
-    }
+    };
+
+    symlinks {
+        "foo" => "bar",
+    };
 
 }
 

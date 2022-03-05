@@ -7,7 +7,7 @@ use crate::{Context, Installable};
 /// If the link path already contains a symlink, it will be deleted
 #[derive(Debug, Clone)]
 pub struct Symlinks {
-    links: HashMap<OsString, OsString>,
+    pub links: HashMap<OsString, OsString>,
 }
 
 impl Installable for Symlinks {
@@ -16,6 +16,11 @@ impl Installable for Symlinks {
             if PathBuf::from(link).is_symlink() {
                 std::fs::remove_file(link)?;
             }
+            info!(
+                "linking {} to {}",
+                link.to_string_lossy(),
+                original.to_string_lossy()
+            );
             symlink(original, link)?;
         }
 
