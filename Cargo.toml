@@ -11,7 +11,7 @@ repository = "https://github.com/cameron1024/dotinstall"
 [dependencies]
 tracing = "0.1"
 duct = "0.13"
-dotinstall-macro = { path = "../dotinstall-macro" }
+dotinstall-macro = "0.1"
 
 [dev-dependencies]
 trybuild = "1"
